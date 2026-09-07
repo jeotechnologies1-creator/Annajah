@@ -1869,12 +1869,17 @@ button {
   border-radius: var(--radius-xl);
   overflow: hidden;
   aspect-ratio: 3/4;
+  box-shadow: 0 24px 60px rgba(24, 42, 31, 0.12);
+  background: linear-gradient(135deg, #e7ddd0, #cfc3b2);
 }
 
 .chairman-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  transform: scale(1.04);
+  filter: saturate(1.08) contrast(1.06);
 }
 
 .chairman-badge {
