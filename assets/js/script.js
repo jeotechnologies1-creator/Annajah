@@ -272,6 +272,13 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function formatCategoryLabel(category) {
+  if (!category) return 'General';
+  return category
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, char => char.toUpperCase());
+}
+
 function renderProperties() {
   const filtered = currentFilter === 'all'
     ? properties
@@ -472,7 +479,7 @@ function openPropertyModal(id) {
           <li><span>Price</span><span>${property.price}</span></li>
           <li><span>Location</span><span>${property.location}</span></li>
           <li><span>Type</span><span>${property.type.charAt(0).toUpperCase() + property.type.slice(1)}</span></li>
-          <li><span>Category</span><span>${property.category.charAt(0).toUpperCase() + property.category.slice(1)}</span></li>
+          <li><span>Category</span><span>${formatCategoryLabel(property.category)}</span></li>
           ${property.beds ? `<li><span>Bedrooms</span><span>${property.beds}</span></li>` : ''}
           ${property.baths ? `<li><span>Bathrooms</span><span>${property.baths}</span></li>` : ''}
           <li><span>Area</span><span>${property.area}</span></li>
