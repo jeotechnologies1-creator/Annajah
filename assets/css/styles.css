@@ -1090,12 +1090,12 @@ button {
 
 .extra-service {
   background: var(--cream);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--soft-gray);
   transition: var(--transition);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -1103,6 +1103,23 @@ button {
   background: var(--white);
   box-shadow: var(--shadow-soft);
   transform: translateY(-3px);
+}
+
+.extra-service-image {
+  width: 82px;
+  height: 82px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(12, 29, 20, 0.08);
+  box-shadow: 0 12px 25px rgba(15, 38, 26, 0.08);
+}
+
+.extra-service-copy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
 }
 
 .extra-service .icon {
