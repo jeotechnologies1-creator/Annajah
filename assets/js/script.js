@@ -76,6 +76,20 @@ const properties = [
     area: '120 sqm',
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop',
     description: 'Retail spaces in a busy shopping plaza with high foot traffic and ample parking.'
+  },
+  {
+    id: 7,
+    title: '16 Seater Jet for Sale',
+    price: '₦18,500,000,000',
+    location: 'Lagos',
+    type: 'sale',
+    category: 'aircraft',
+    beds: 0,
+    baths: 0,
+    area: 'Private Jet',
+    image: 'image/jet.png',
+    description: '16-seater executive jet in red finish, available for sale in Lagos. Premium cabin configuration, luxury interior, and ideal for private charter or executive travel.',
+    status: 'available'
   }
 ];
 
