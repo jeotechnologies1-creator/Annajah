@@ -864,17 +864,23 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .value-card {
   background: var(--white);
-  padding: 2rem;
+  padding: 1.75rem 1.5rem;
   border-radius: var(--radius-lg);
   text-align: center;
   border: 1px solid var(--soft-gray);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .value-card::before {
@@ -934,17 +940,23 @@ button {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .feature-card {
   background: var(--white);
-  padding: 2.5rem;
+  padding: 2rem 1.75rem;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-soft);
   transition: var(--transition);
   position: relative;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .feature-card:hover {
@@ -997,6 +1009,10 @@ button {
   overflow: hidden;
   border: 1px solid var(--soft-gray);
   transition: var(--transition);
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -1041,6 +1057,9 @@ button {
 
 .service-body {
   padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .service-list {
@@ -1055,6 +1074,9 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .service-list li::before {
@@ -1083,9 +1105,10 @@ button {
 
 .extra-services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   margin-top: 3rem;
+  align-items: stretch;
 }
 
 .extra-service {
@@ -1097,6 +1120,9 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .extra-service:hover {
@@ -1119,7 +1145,13 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.extra-service-copy > div {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .extra-service .icon {
@@ -1138,12 +1170,18 @@ button {
 .extra-service h4 {
   font-size: 1rem;
   margin-bottom: 0.25rem;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .extra-service p {
   font-size: 0.85rem;
   color: var(--medium-gray);
   margin: 0;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .properties-section {
@@ -1994,8 +2032,9 @@ button {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .team-card {
@@ -2005,6 +2044,10 @@ button {
   text-align: center;
   box-shadow: var(--shadow-soft);
   transition: var(--transition);
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .team-card:hover {
@@ -2089,18 +2132,24 @@ button {
 
 .counters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .counter-card {
   text-align: center;
-  padding: 2rem;
+  padding: 1.75rem 1.25rem;
   background: rgba(255,255,255,0.05);
   border-radius: var(--radius-xl);
   border: 1px solid rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   transition: var(--transition);
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .counter-card:hover {
@@ -2212,17 +2261,23 @@ button {
 
 .docs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
 }
 
 .doc-card {
   background: var(--white);
-  padding: 2rem;
+  padding: 1.5rem 1.25rem;
   border-radius: var(--radius-xl);
   text-align: center;
   border: 1px solid var(--soft-gray);
   transition: var(--transition);
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .doc-card:hover {
@@ -2344,15 +2399,16 @@ button {
 .contact-offices {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .office-card {
   background: var(--cream);
-  padding: 1.5rem;
+  padding: 1.25rem 1.25rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--soft-gray);
+  min-width: 0;
 }
 
 .office-card h4 {
@@ -2380,11 +2436,12 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.9rem 1rem;
   background: var(--white);
   border-radius: var(--radius-lg);
   border: 1px solid var(--soft-gray);
   transition: var(--transition);
+  min-width: 0;
 }
 
 .contact-item:hover {
@@ -2886,8 +2943,25 @@ button {
   }
 
   .features-grid,
-  .properties-grid {
+  .properties-grid,
+  .services-grid,
+  .extra-services {
     grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .extra-service {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .extra-service {
+    align-items: flex-start;
+  }
+
+  .extra-service-image {
+    width: 74px;
+    height: 74px;
   }
 
   .trust-container {
