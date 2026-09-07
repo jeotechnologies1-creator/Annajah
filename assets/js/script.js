@@ -108,7 +108,7 @@ const testimonials = [
 
 let currentTestimonial = 0;
 let currentFilter = 'all';
-const CHAIRMAN_PASSWORD = 'ANNAAJAH2026';
+const CHAIRMAN_PASSWORD = 'ANNAJAAH2026';
 
 const navbar = document.getElementById('navbar');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
