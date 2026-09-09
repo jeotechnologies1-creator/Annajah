@@ -565,11 +565,37 @@ function handleContactSubmit(e) {
   const form = e.target;
   const submitBtn = form.querySelector('.form-submit');
   const originalText = submitBtn.textContent;
-  submitBtn.textContent = 'Sending...';
+  const companyEmail = 'Annajaahbestendproperties@gmail.com';
+
+  const formData = new FormData(form);
+  const name = (formData.get('name') || '').toString().trim();
+  const phone = (formData.get('phone') || '').toString().trim();
+  const email = (formData.get('email') || '').toString().trim();
+  const service = (formData.get('service') || '').toString().trim();
+  const message = (formData.get('message') || '').toString().trim();
+
+  const serviceLabel = {
+    buy: 'Buy Property',
+    sell: 'Sell Property',
+    rent: 'Rent Property',
+    manage: 'Property Management',
+    construct: 'Construction',
+    valuation: 'Property Valuation',
+    other: 'Other'
+  }[service] || 'General Inquiry';
+
+  submitBtn.textContent = 'Opening email...';
   submitBtn.disabled = true;
 
+  const subject = encodeURIComponent(`New Contact Message from ${name || 'Website Visitor'} - ${serviceLabel}`);
+  const body = encodeURIComponent(
+    `Full Name: ${name}\nPhone Number: ${phone}\nEmail Address: ${email || 'Not provided'}\nService Needed: ${serviceLabel}\n\nMessage:\n${message}`
+  );
+
+  window.location.href = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
+
   setTimeout(() => {
-    alert('Thank you for your message! We will contact you within 24 hours.');
+    alert('Your email app has been opened with the message ready to send.');
     form.reset();
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
